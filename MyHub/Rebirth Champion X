@@ -8,7 +8,7 @@ _G.AutoTap = true
 
 function AutoTap()
 While _G.AutoTap == true do 
-game:GetService("ReplicatedStorage").Remotes["buy egg"]:InvokeServer({{"Common Egg"},{false}})
+game:GetService("ReplicatedStorage").Events.Click3:FireServer()
 wait (0.00001)
  end
 end
