@@ -1,5 +1,5 @@
 if game.PlaceId == 8540346411 then
-
-elseif game.PlaceId == id then
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Rebirth%20Champion%20X"))()
+else
+ print ("Game Not Support")
 end
