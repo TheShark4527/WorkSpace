@@ -2,14 +2,14 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Rebirth Champion X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- vaulues
-_G.AutoTap = true
+_G.autotap = true
 
 --functions
 
 function AutoTap()
-While _G.AutoTap == true do 
+while _G.autotap == true do 
 game:GetService("ReplicatedStorage").Events.Click3:FireServer()
-wait (0.00001)
+wait (0.01)
  end
 end
  
@@ -39,8 +39,8 @@ local Tab = Window:MakeTab({
 MainTab:AddToggle({
 	Name = "Auto Tap👆",
 	Default = false,
-	Callback = function(Vaule)
-	    _G.AutoTap = Value
+	Callback = function(Value)
+	    _G.autotap = Value
       AutoTap()
 	end    
 })
