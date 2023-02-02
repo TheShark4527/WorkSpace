@@ -1,7 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Rebirth Champion X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
--- vaulues
+-- Varables
+
+-- values
 _G.autotap = true
 
 --functions
@@ -22,18 +24,6 @@ local MainTab = Window:MakeTab({
 })
 
 
-local Tab = Window:MakeTab({
-	Name = "Misic📍",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-
-local Tab = Window:MakeTab({
-	Name = "Setting ⚙️",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
 -- scripts
 MainTab:AddToggle({
@@ -44,6 +34,9 @@ MainTab:AddToggle({
       AutoTap()
 	end    
 })
+
+
+
 
 
 
