@@ -1,5 +1,7 @@
 if game.PlaceId == 8540346411 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Rebirth%20Champion%20X"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Rebirth%20Champion%20X"))()
+
 elseif game.PlaceId == 9498006165 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Tapping%20Simulator"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Tapping%20Simulator"))()
+
 end
