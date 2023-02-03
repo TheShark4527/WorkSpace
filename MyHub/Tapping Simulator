@@ -1,0 +1,78 @@
+-- Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Tapping Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+OrionLib:MakeNotification({
+	Name = "Water X Hub",
+	Content = "Wait for Water X Hub check game support and load btw script make by huy#2175",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+-- Value
+_G.autotap = true
+_G.autoegg = true
+-- local
+local Eggs = game:GetService("Workspace").Shops:GetChildren()
+
+local EggsTable = {}
+for i,v in pairs(Eggs) do
+  table.insert(EggsTable, v.name)
+end
+
+-- Functions
+function AutoTap()
+while _G.autotap == true do wait(0.001)
+game:GetService("ReplicatedStorage").Events.Tap:FireServer("Main")
+ end
+end
+
+function AutoHatch()
+ while _G.autoegg == true do wait(1)
+game:GetService("ReplicatedStorage").Events.HatchEgg:InvokeServer({},GaiAlime,1)
+ end
+end
+-- Tabs
+local MainTab = Window:MakeTab({
+	Name = "Main📍",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local EggsTab = Window:MakeTab({
+	Name = "Eggs📍",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+-- Main
+MainTab:AddToggle({
+	Name = "Auto Tap👆",
+	Default = false,
+	Callback = function(Value)
+		_G.autotap = Value
+            AutoTap()
+	end    
+})
+
+
+-- Eggs
+EggsTab:AddDropdown({
+	Name = "Choose egg",
+	Default = "",
+	Options = EggsTable,
+	Callback = function(CurrentEgg)
+		GaiAlime = CurrentEgg
+	end    
+})
+
+EggsTab:AddToggle({
+	Name = "Auto Hatch Egg Seclect💀🐧😭",
+	Default = false,
+	Callback = function(cc)
+		_G.autoegg = cc
+             AutoHatch()
+	end    
+})
+ 
+
+
+-- end
+OrionLib:Init()
