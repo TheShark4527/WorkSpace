@@ -3,6 +3,16 @@ local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, Sa
 
 CurrentKey = "TrungKiUongSuaMilo"
 
+function incorrectKey()
+OrionLib:MakeNotification({
+	Name = "IncorrectKey !",
+	Content = "if u want know key ask me discord : huy#2175 | mày ngu vãi lồn muốn biết key thì hỏi t discord : huy#2175",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+end
+
+
 function notify()
 OrionLib:MakeNotification({
 	Name = "Start Load Water X Hub",
@@ -35,7 +45,9 @@ Tab:AddButton({
       	if KeyInput == CurrentKey then   
               notify()
           wait (1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Water%20X%20HUB")()               
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheShark4527/WorkSpace/main/MyHub/Water%20X%20HUB")()
+     else
+    IncorrectKey()               
   	end                                                              
 end    
 })
